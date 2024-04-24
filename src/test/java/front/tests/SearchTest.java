@@ -6,17 +6,14 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Selenide.open;
-import static front.data.ConfigProvider.URL;
-
 @Feature("Поиск информации")
 public class SearchTest extends BaseTest {
 
     @Test
     @Order(1)
-    @DisplayName("Поиск сайта погоды")
-    public void test() {
-        open(URL);
+    @DisplayName("Поиск информации о погоде в Перелюбе")
+    public void test1() {
+        startPage.enterText("Погода в Перелюбе")
+                .checkCardWeather("Перелюб, Саратовская область");
     }
-
 }

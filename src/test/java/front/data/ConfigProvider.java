@@ -13,5 +13,6 @@ public interface ConfigProvider {
                 : ConfigFactory.load("application.conf");
     }
 
-    String URL = readConfig().getString("url_google");
+    String URL_GOOGLE = readConfig().getString("url_google");
+    String URL_EDGE = readConfig().getString("url_edge");
 }
